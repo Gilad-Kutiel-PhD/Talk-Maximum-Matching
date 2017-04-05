@@ -1,0 +1,47 @@
+\begin{tikzpicture}[every node/.style={default node}, very thick]
+\node[](-1) at (0,4) {};
+\node[](0) at (0,2) {};
+\node[](1) at (0,0) {};
+
+\draw[notm] (-1) -- (0);
+\draw[path] (0) -- (1);
+
+\begin{scope}[opacity=.5]
+\node[](2) at (2,0) {};
+\node[](3) at (3,-1.5) {};
+\node[](4) at (3,1.5) {};
+
+\node[](5) at (6,0) {};
+\node[](6) at (5,-1.5) {};
+\node[](7) at (5,1.5) {};
+
+\draw[m] (1) -- (2);
+\draw[notm] (2) -- (3);
+\draw[notm] (2) -- (4);
+
+\draw[path] (4) -- (7);
+\draw[path] (3) -- (6);
+
+\draw[m] (7) -- (5);
+\draw[notm] (6) -- (5);
+\end{scope}
+
+\node[](8) at(8,0) {};
+\node[](9) at(8,2) {};
+\node[](10) at(8,4) {};
+
+\draw[notm] (5) -- (8); 
+\draw[path] (8) -- (9);
+\draw[notm] (9) -- (10); 
+
+\draw[dashed]
+(2.west) to[out=90, in=180] 
+(4.north) to[]
+(7.north) to[out=0, in=90]
+(5.east) to[out=-90, in=0] 
+(6.south) to[]
+(3.south) to[out=180, in=-90]
+(2.west)
+;
+\end{tikzpicture}
+
