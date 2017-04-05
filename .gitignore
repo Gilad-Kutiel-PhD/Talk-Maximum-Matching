@@ -1,0 +1,13 @@
+gen/*.tex
+tex
+tmp
+*~
+*.aux
+*.fls
+*.gz
+*.log
+*.pdf
+*.swp
+*.tmp
+*.zip
+*.fdb_latexmk
