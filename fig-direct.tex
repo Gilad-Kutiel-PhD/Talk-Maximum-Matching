@@ -1,0 +1,39 @@
+\begin{tikzpicture}[every node/.style={default node}, very thick]
+\def\r{2}
+\def\a{60}
+
+\node[free](1) at (2,2) {1};
+\node[free](2) at (0,0) {2};
+\node[neighbor](3) at (2,0) {3};
+\node(4) at (4,0) {4};
+\node(5) at (6,0) {5};
+
+\node(6) at (5,1.5) {6};
+\node(7) at (6,3) {7};
+\node[neighbor](8) at (4,3) {8};
+\node[free](9) at (2,3) {9};
+
+\begin{scope}[opacity=0.4]
+\draw[notm] (1) -- (3);
+\draw[notm] (2) -- (3);
+\draw[m] (3) -- (4);
+\draw[notm] (4) -- (5);
+\draw[m] (5) -- (6);
+\draw[notm] (6) -- (4);
+\draw[notm] (6) -- (7);
+\draw[m] (7) -- (8);
+\draw[notm] (8) -- (9);
+\end{scope}
+
+\begin{scope}[->]
+\draw (1) to[bend left] (4);
+\draw (2) to[bend right] (4);
+\draw (5) to[bend left] (3);
+\draw (6) to[bend right] (3);
+\draw (4) to[bend left] (6);
+\draw (4) to[bend right] (5);
+\draw (6) to[] (8);
+\draw (9) to[bend left] (7);
+\draw (7) to[bend left] (5);
+\end{scope}
+\end{tikzpicture}

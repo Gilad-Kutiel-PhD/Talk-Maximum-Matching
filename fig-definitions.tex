@@ -1,0 +1,25 @@
+\begin{tikzpicture}[every node/.style={default node}, very thick]
+\def\r{2}
+\def\a{60}
+
+\node(1) at (2,2) {1};
+\node(2) at (0,0) {2};
+\node(3) at (2,0) {3};
+\node(4) at (4,0) {4};
+\node(5) at (6,0) {5};
+
+\node(6) at (5,1.5) {6};
+\node(7) at (6,3) {7};
+\node(8) at (4,3) {8};
+\node(9) at (2,3) {9};
+
+\draw[notm] (1) -- (3);
+\draw[notm] (2) -- (3);
+\draw[m] (3) -- (4);
+\draw[notm] (4) -- (5);
+\draw[m] (5) -- (6);
+\draw[notm] (6) -- (4);
+\draw[notm] (6) -- (7);
+\draw[m] (7) -- (8);
+\draw[notm] (8) -- (9);
+\end{tikzpicture}

@@ -4,31 +4,31 @@ arrows,
 arrows.meta,
 shapes,
 positioning,
+decorations.pathmorphing,
+decorations.markings,
 }
-
-%DEFAULT STYLE
-\tikzset{default style/.style={
-	>=Stealth, 
-	on grid, 
-	auto, 
-	thick,
-}}
 
 % NODE
 \tikzset{default node/.style={
 	draw, 
 	circle,
-	inner sep=0mm,
+	inner sep=1mm,
 	minimum size=5mm,
 	very thick,
 	font=\small,
 	black!70,
 }}
 
+\tikzset{notm/.style={green,dashed}}
+\tikzset{m/.style={red}}
+\tikzset{free/.style={blue,dashed}}
+\tikzset{neighbor/.style={orange,dotted}}
+
 % LABELS
 \tikzset{label/.style={
 	draw=none,
 	sloped,
+	font=\large,
 }}
 
 \tikzset{label above/.style={
