@@ -1,0 +1,92 @@
+\begin{tikzpicture}[every node/.style={default node}, very thick]
+\node[](-1) at (0,4) {-1};
+\node[](0) at (0,2) {0};
+\node[](1) at (0,0) {1};
+
+\draw[notm] (-1) -- (0);
+\draw[path] (0) -- (1);
+
+\begin{scope}[opacity=.5]
+\node[](2) at (2,0) {2};
+\node[](3) at (3,-1.5) {3};
+\node[](4) at (3,1.5) {4};
+
+\node(13) at(4.5, 1.5) {13};
+
+\node[](5) at (7,0) {5};
+\node[](6) at (6,-1.5) {6};
+\node[](7) at (6,1.5) {7};
+
+\draw[m] (1) -- (2);
+\draw[notm] (2) -- (3);
+\draw[notm] (2) -- (4);
+
+
+\draw[path] (4) -- (13);
+\draw[path] (13) -- (7);
+\draw[path] (3) -- (6);
+
+\draw[m] (7) -- (5);
+\draw[notm] (6) -- (5);
+\end{scope}
+
+\node[](8) at(9,0) {8};
+\node[](9) at(9,2) {9};
+\node[](10) at(9,4) {10};
+
+\draw[notm] (5) -- (8); 
+\draw[path] (8) -- (9);
+\draw[notm] (9) -- (10); 
+
+\draw[dashed]
+(2.west) to[out=90, in=180] 
+(4.north) to[]
+(7.north) to[out=0, in=90]
+(5.east) to[out=-90, in=0] 
+(6.south) to[]
+(3.south) to[out=180, in=-90]
+(2.west)
+;
+
+\node(11) at (0, -2) {11};
+\node(12) at (0, -4) {12};
+
+\draw[path] (1) -- (11);
+\draw[notm] (11) -- (12);
+
+\node[](14) at (6,4) {14};
+\node[](15) at (4.5,4) {15};
+
+\draw[notm] (14) -- (15);
+\draw[path] (15) -- (13);
+
+\draw[->, orange]
+($(14) + (0,-.5)$)	to[out=180, in=45]
+($(15) + (.5,-.7)$)	to[out=-135, in=135]
+($(13) + (.5,.7)$)	to[out=-45, in=135]
+($(7) + (1,.2)$) 	to[out=-45, in=135]
+($(5) + (.5,.5)$)	to[out=-45, in=-135]
+($(8) + (-.75,.5)$)	to[out=45, in=-90]
+($(9) + (-.5,0)$)	to[out=90, in=-90]
+($(10) + (-.5,0)$)
+;
+
+\draw[->, orange]
+($(-1) + (.5,0)$)	to[]
+($(0) + (.5,0)$)	to[out=-90, in=135]
+($(1) + (.7,.5)$)	to[out=-45, in=-135]
+($(2) + (0,.7)$) 	to[out=45, in=180]
+($(4) + (0,-.4)$)	to[out=0, in=0]
+($(13) + (0,-.4)$)	to[out=0, in=135]
+($(7) + (0,-.7)$)	to[out=-45, in=90]
+($(5) + (-.5,0)$)	to[out=-90, in=45]
+($(6) + (0,.8)$)	to[out=-135, in=-45]
+($(3) + (-.5,.8)$)	to[out=135, in=-45]
+($(2) + (.4,-.6)$)	to[out=135, in=45]
+($(1) + (.5,-.5)$)	to[out=-135, in=90]
+($(11) + (.5,0)$)	to[out=-90, in=90]
+($(12) + (.5,0)$)
+;
+
+\end{tikzpicture}
+
