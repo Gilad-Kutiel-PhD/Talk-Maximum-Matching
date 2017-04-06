@@ -1,21 +1,21 @@
 \begin{tikzpicture}[every node/.style={default node}, very thick]
-\node[](-1) at (0,4) {-1};
-\node[](0) at (0,2) {0};
-\node[](1) at (0,0) {1};
+\node[](-1) at (0,4) {};
+\node[](0) at (0,2) {};
+\node[](1) at (0,0) {};
 
 \draw[notm] (-1) -- (0);
 \draw[path] (0) -- (1);
 
 \begin{scope}[opacity=.5]
-\node[](2) at (2,0) {2};
-\node[](3) at (3,-1.5) {3};
-\node[](4) at (3,1.5) {4};
+\node[](2) at (2,0) {};
+\node[](3) at (3,-1.5) {};
+\node[](4) at (3,1.5) {};
 
-\node(13) at(4.5, 1.5) {13};
+\node(13) at(4.5, 1.5) {};
 
-\node[](5) at (7,0) {5};
-\node[](6) at (6,-1.5) {6};
-\node[](7) at (6,1.5) {7};
+\node[](5) at (7,0) {};
+\node[](6) at (6,-1.5) {};
+\node[](7) at (6,1.5) {};
 
 \draw[m] (1) -- (2);
 \draw[notm] (2) -- (3);
@@ -30,9 +30,9 @@
 \draw[notm] (6) -- (5);
 \end{scope}
 
-\node[](8) at(9,0) {8};
-\node[](9) at(9,2) {9};
-\node[](10) at(9,4) {10};
+\node[](8) at(9,0) {};
+\node[](9) at(9,2) {};
+\node[](10) at(9,4) {};
 
 \draw[notm] (5) -- (8); 
 \draw[path] (8) -- (9);
@@ -48,14 +48,14 @@
 (2.west)
 ;
 
-\node(11) at (0, -2) {11};
-\node(12) at (0, -4) {12};
+\node(11) at (0, -2) {};
+\node(12) at (0, -4) {};
 
 \draw[path] (1) -- (11);
 \draw[notm] (11) -- (12);
 
-\node[](14) at (6,4) {14};
-\node[](15) at (4.5,4) {15};
+\node[](14) at (6,4) {};
+\node[](15) at (4.5,4) {};
 
 \draw[notm] (14) -- (15);
 \draw[path] (15) -- (13);
